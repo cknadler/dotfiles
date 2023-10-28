@@ -13,8 +13,7 @@ plugins=(brew)
 
 bindkey -v
 
-###
-# path
+### # path
 ###
 
 installed() { hash $1 &> /dev/null; }
@@ -92,7 +91,8 @@ alias g=git
 
 # navigation
 alias src='cd ~/src'
-alias home='cd ~/.homesick/repos/dotfiles'
+alias home='cd ~/.local/share/chezmoi'
+alias setup='cd ~/src/setup'
 
 # core-utils
 alias readlink=greadlink
@@ -103,3 +103,4 @@ alias bc-dl="bandcamp-dl --base-dir='Dropbox/music/music-mp3'"
 # chezmoi
 alias chez='chezmoi'
 alias chez-ra='chezmoi re-add'
+alias chez-cd='chezmoi cd'
