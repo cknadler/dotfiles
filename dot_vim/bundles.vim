@@ -17,7 +17,6 @@ Bundle 'gmarik/vundle'
 " bundles
 """""""""""""""""""""""
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'Valloric/MatchTagAlways'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'chikamichi/mediawiki.vim'
 Bundle 'chrisbra/NrrwRgn'
