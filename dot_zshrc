@@ -94,18 +94,12 @@ alias g=git
 alias src='cd ~/src'
 alias home='cd ~/.homesick/repos/dotfiles'
 
-# ruby dev
-alias bex='bundle exec'
-alias bi='bundle install'
-alias bu='bundle uninstall'
-
 # core-utils
 alias readlink=greadlink
 
-# navigation aliases
-if [ -f ~/.bin/gen-aliases ]; then
-  eval `~/.bin/gen-aliases`
-fi
-
 # bandcamp-dl
 alias bc-dl="bandcamp-dl --base-dir='Dropbox/music/music-mp3'"
+
+# chezmoi
+alias chez='chezmoi'
+alias chez-ra='chezmoi re-add'
