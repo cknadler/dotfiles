@@ -1,5 +1,9 @@
 behavior {
     theme "Kon"
+    
+    layout {
+        showActionBar false
+    }
 }
 
 keyBindings {    
