@@ -10,7 +10,7 @@ keyBindings {
     "Cmd+R" "core.refresh"
     "Cmd+E" "core.edit.folder"
     "Cmd+Shift+C" "core.copy"
-    "Cmd+Shift+M" "core.move"
+    "Cmd+Shift+M" "core.move.inactive"
     "Cmd+Shift+R" "core.rename"
     "Cmd+Shift+N" "core.new.folder"    
 }
