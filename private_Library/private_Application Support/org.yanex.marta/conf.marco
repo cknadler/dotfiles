@@ -12,5 +12,10 @@ keyBindings {
     "Cmd+Shift+C" "core.copy"
     "Cmd+Shift+M" "core.move.inactive"
     "Cmd+Shift+R" "core.rename"
-    "Cmd+Shift+N" "core.new.folder"    
+    "Cmd+Shift+N" "core.new.folder"
+    
+    "Cmd+P" "core.terminal.activate"
+    "Cmd+Opt+P" "core.terminal.toggle"
+    "Cmd+O" "core.lookup"
+    "Cmd+Opt+O" "core.lookup.here"
 }
