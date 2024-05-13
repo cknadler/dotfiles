@@ -1,21 +1,24 @@
 behavior {
     theme "Kon"
-    
+
     layout {
         showActionBar false
     }
 }
 
-keyBindings {    
+keyBindings {
     "Cmd+R" "core.refresh"
     "Cmd+E" "core.edit.folder"
     "Cmd+Shift+C" "core.copy"
     "Cmd+Shift+M" "core.move.inactive"
     "Cmd+Shift+R" "core.rename"
     "Cmd+Shift+N" "core.new.folder"
-    
+
     "Cmd+P" "core.terminal.activate"
     "Cmd+Opt+P" "core.terminal.toggle"
     "Cmd+O" "core.lookup"
     "Cmd+Opt+O" "core.lookup.here"
+
+    "Cmd+H" "core.clone.left"
+    "Cmd+L" "core.clone.right"
 }
