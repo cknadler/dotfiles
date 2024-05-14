@@ -3,9 +3,11 @@
 ###
 
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME='minimal'
+ZSH_THEME="typewritten"
+export TYPEWRITTEN_PROMPT_LAYOUT="pure"
 source $ZSH/oh-my-zsh.sh
 plugins=(brew macos sudo)
+
 
 ###
 # zsh config
@@ -13,7 +15,8 @@ plugins=(brew macos sudo)
 
 bindkey -v
 
-### # path
+###
+# path
 ###
 
 installed() { hash $1 &> /dev/null; }
@@ -71,9 +74,6 @@ export DISABLE_AUTO_TITLE=true
 alias c="clear"
 alias reset="exec $SHELL -l"
 alias rst=reset
-alias rm="rm -i"
-alias cp="cp -i"
-alias mv="mv -i"
 alias dud="du -d 1 -h"
 alias t="tail -f"
 
