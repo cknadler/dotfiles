@@ -69,7 +69,7 @@ export DISABLE_AUTO_TITLE=true
 
 # general
 alias c="clear"
-alias reset="exec $SHELL -l && clear"
+alias reset="exec $SHELL -l"
 alias rst=reset
 alias rm="rm -i"
 alias cp="cp -i"
