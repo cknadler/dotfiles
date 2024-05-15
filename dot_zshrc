@@ -8,7 +8,6 @@ export TYPEWRITTEN_PROMPT_LAYOUT="pure"
 source $ZSH/oh-my-zsh.sh
 plugins=(brew macos sudo)
 
-
 ###
 # zsh config
 ###
@@ -112,3 +111,9 @@ alias bc-dl='bandcamp-dl --base-dir="Dropbox/music/music-mp3"'
 alias chez="chezmoi"
 alias chez-ra="chezmoi re-add"
 alias chez-cd="chezmoi cd"
+
+###
+# autocomplete
+###
+
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
