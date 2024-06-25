@@ -21,4 +21,6 @@ keyBindings {
 
     "Cmd+H" "core.clone.left"
     "Cmd+L" "core.clone.right"
+    
+    "Cmd+Opt+Shift+O" "core.finder.reveal"
 }
