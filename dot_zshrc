@@ -1,10 +1,10 @@
 ###
 # oh my zsh
 ###
-
+#
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="typewritten"
-export TYPEWRITTEN_PROMPT_LAYOUT="pure"
+autoload -U promptinit; promptinit
+prompt typewritten
 source $ZSH/oh-my-zsh.sh
 plugins=(brew macos sudo)
 
@@ -120,3 +120,5 @@ alias yt-dl-audio='yt-dlp -x --audio-format mp3 -o "~/Downloads/%(title)s.%(ext)
 ###
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+bindkey '^E' autosuggest-accept
+
