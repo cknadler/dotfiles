@@ -112,6 +112,9 @@ alias chez="chezmoi"
 alias chez-ra="chezmoi re-add"
 alias chez-cd="chezmoi cd"
 
+# yt-dlp
+alias yt-dl-audio='yt-dlp -x --audio-format mp3 -o "~/Downloads/%(title)s.%(ext)s"'
+
 ###
 # autocomplete
 ###
