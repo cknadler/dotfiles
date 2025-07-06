@@ -1,5 +1,6 @@
 Home "~"
-Dropbox "~/Dropbox"
+Dropbox "~/Library/CloudStorage/Dropbox"
 Downloads "${user.downloads}"
 Desktop "${user.desktop}"
 Applications "${all.applications}"
+"Dropbox (2)" "/Users/cknadler/Library/CloudStorage/Dropbox"
