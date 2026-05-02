@@ -1,0 +1,1 @@
+brew 'font-jetbrains-mono'
