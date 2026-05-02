@@ -124,3 +124,15 @@ bindkey '^E' autosuggest-accept
 
 eval "$(mise activate zsh)"
 
+###
+# fzf
+###
+
+eval "$(fzf --zsh)"
+
+###
+# syntax highlighting (must be last)
+###
+
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
