@@ -11,10 +11,13 @@ copy-on-select = clipboard
 # No "close this terminal?" confirmation
 confirm-close-surface = false
 
+# Start at login so the global hotkey works without manually opening Ghostty
+launch-at-login = true
+
 # Quick terminal: cmd+` drops a terminal from the top of screen
 # Works globally even when Ghostty isn't the focused app
 # Requires Ghostty in System Settings → Privacy & Security → Accessibility
-keybind = global:cmd+grave_accent=toggle_quick_terminal
+keybind = global:ctrl+grave_accent=toggle_quick_terminal
 quick-terminal-position = top
 quick-terminal-animation-duration = 0
 
