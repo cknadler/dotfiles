@@ -1,15 +1,24 @@
 [core]
   whitespace = trailing-space,space-before-tab
-  excludesfile = /Users/kndlrc/.gitignore
-  editor = vim
+  excludesfile = ~/.config/git/ignore
+  editor = nvim
   pager = less -FMRiX
 
 [user]
   name = Chris Knadler
-  email = kndlrc@amazon.com
+  email = ckndlr@gmail.com
+
+[init]
+  defaultBranch = main
 
 [push]
   default = upstream
+
+[pull]
+  rebase = true
+
+[rebase]
+  autoStash = true
 
 [alias]
   # add
@@ -40,15 +49,15 @@
   dc = diff --cached
 
   # log
-  l = log --decorate --stat # standard log
-  sl = log --pretty=format:'%Cred%h%Creset %s %Cgreen%d%Creset' # short log
-  tl = log --pretty=format:'%h %s %d' # timeline log, no color
-  cl = log -u # change log
+  l = log --decorate --stat
+  sl = log --pretty=format:'%Cred%h%Creset %s %Cgreen%d%Creset'
+  tl = log --pretty=format:'%h %s %d'
+  cl = log -u
   dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%ar%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
 
   # ribbon
-  ribbon = tag --force _ribbon origin/master
-  catchup = log --patch --reverse --topo-order _ribbon..origin/master
+  ribbon = tag --force _ribbon origin/main
+  catchup = log --patch --reverse --topo-order _ribbon..origin/main
 
   # rebase
   rb = rebase
@@ -68,7 +77,7 @@
   uc = reset --soft HEAD^
 
   # push
-  pom = push origin master
+  pom = push origin main
   ps = push
 
   # pull
@@ -85,7 +94,3 @@
 
 [github]
   user = cknadler
-
-[amazon]
-	append-cr-url = true
-	pull-request-by-default = false
