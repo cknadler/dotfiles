@@ -1,0 +1,30 @@
+# Shell integration: semantic prompts, cursor tracking, sudo handling
+shell-integration = zsh
+
+# Block cursor to match vim/nvim
+cursor-style = block
+cursor-style-blink = false
+
+# Selection goes straight to clipboard
+copy-on-select = clipboard
+
+# No "close this terminal?" confirmation
+confirm-close-surface = false
+
+# Quick terminal: cmd+` drops a terminal from the top of screen
+# Works globally even when Ghostty isn't the focused app
+# Requires Ghostty in System Settings → Privacy & Security → Accessibility
+keybind = global:cmd+grave_accent=toggle_quick_terminal
+quick-terminal-position = top
+quick-terminal-animation-duration = 0
+
+# Font
+font-family = JetBrains Mono
+font-size = 14
+
+# Padding
+window-padding-x = 8
+window-padding-y = 4
+
+# Theme — run `ghostty +list-themes` to browse all options
+# theme = catppuccin-mocha
