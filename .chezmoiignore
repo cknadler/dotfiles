@@ -1,1 +1,22 @@
+# Files in this repo that aren't meant to be deployed to $HOME.
 README.md
+CLAUDE.md
+
+# Transient / machine-local Claude Code state. These never live in source
+# state; the patterns below guard against accidental `chezmoi re-add`.
+.claude/.last-cleanup
+.claude/backups
+.claude/cache
+.claude/downloads
+.claude/file-history
+.claude/history.jsonl
+.claude/mcp-needs-auth-cache.json
+.claude/paste-cache
+.claude/plugins
+.claude/projects
+.claude/session-env
+.claude/sessions
+.claude/settings.local.json
+.claude/shell-snapshots
+.claude/tasks
+.claude/telemetry
