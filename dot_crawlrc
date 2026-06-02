@@ -1,7 +1,5 @@
 default_manual_training=true
 autofight_stop = 50
-auto_butcher=true
-auto_eat_chunks = true
 show_more = false
 
 # autopickup = $?!:"/%}|\
@@ -33,14 +31,10 @@ ae += <artefact
 # Interface #
 #############
 
-autofight_throw = false
-autofight_throw_nomove = false
 
 show_travel_trail = true
 travel_delay = -1
 rest_delay = -1
-auto_sacrifice = true
-sacrifice_before_explore = true
 
 show_game_time = true
 
@@ -48,12 +42,8 @@ warn_hatches = true
 jewellery_prompt = false
 equip_unequip = true
 allow_self_target = never
-confirm_butcher = never
-easy_eat_gourmand = true
-sort_menus = true : equipped, identified, basename, qualname, charged
 hp_warning = 50
 
-wall_jump_move = false
 
 ##############
 # Autopickup #
@@ -94,7 +84,6 @@ ae += >ring of wizardry
 
 dump_item_origins = all
 dump_message_count = 50
-dump_book_spells = false
 
 ##########
 # Travel #
@@ -125,8 +114,6 @@ ignore += safely over a trap
 ignore += A.*toadstool withers and dies
 ignore += toadstools? grow
 ignore += You walk carefully through the
-ignore += chunks of flesh in your inventory.*rotted away
-runrest_ignore_poison  = 5:10
 runrest_ignore_monster += ^butterfly:1
 
 # Bad things
@@ -135,7 +122,6 @@ stop += An alarm trap emits a blaring wail
 stop += (blundered into a|invokes the power of) Zot
 stop += A huge blade swings out and slices into you!
 stop += flesh start
-stop += (starving|feel devoid of blood)
 stop += wrath finds you
 stop += lose consciousness
 stop += watched by something
@@ -266,7 +252,6 @@ more += You convulse
 more += You are (blasted|electrocuted)
 more += You are.*confused
 more += flesh start
-more += (starving|devoid of blood)
 more += wrath finds you
 more += god:(sends|finds|silent|anger)
 more += You feel a surge of divine spite
@@ -551,7 +536,6 @@ msc += mute:Placed new exclusion
 msc += mute:Reduced exclusion size to a single square
 msc += mute:Removed exclusion
 msc += mute:You can access your shopping list by pressing
-msc += mute:for starvation awaits
 msc += mute:As you enter the labyrinth
 msc += mute:previously moving walls settle noisily into place
 msc += mute:You offer a prayer to Elyvilon
@@ -563,8 +547,6 @@ msc += mute:Lugonu accepts your kill
 msc += mute:Okawaru is noncommittal
 msc += mute:Nemelex Xobeh is (noncommittal|pleased)
 msc += mute:The plant looks sick
-msc += mute:You start butchering
-msc += mute:You continue butchering
 msc += mute:This raw flesh tastes terrible
 
 : if string.find(you.god(), "Jiyva") then
@@ -1153,7 +1135,6 @@ msc += $danger:bends your attack away
 msc += $danger:Your song has ended
 msc += $danger:goes into a battle-frenzy
 msc += $danger:Your aura of abjuration expires
-msc += $danger:Your.*is blown up
 msc += $danger:There's only one card left
 msc += $danger:You deal a card
 msc += $danger:darts out from under the net
@@ -1231,7 +1212,6 @@ msc += $item_dmg:The rust devil corrodes your equipment
 msc += $item_dmg:catch(es)? fire
 msc ^= $item_dmg:freezes? and shatters?
 msc += $item_dmg:covered with spores
-msc += $item_dmg:devours some of your food
 msc += $item_dmg:rots? away
 msc += $item_dmg:It has a very clean taste
 msc += $item_dmg:You feel your flesh rotting away
@@ -1324,8 +1304,6 @@ msc += $warning:This room is filled with shadowy figures
 msc += $warning:You feel spirits watching over you
 msc += $warning:You feel a genetic drift
 msc += $warning:You return to the normal time flow
-msc ^= $warning:The corpse rots
-msc ^= $warning:You finish butchering the rotting
 msc += $warning:reappears nearby
 msc += $warning:I'll put it outside for you
 msc += $warning:A pair of horns grows on your head
@@ -1487,7 +1465,6 @@ msc += $warning:The.*explodes
 msc += $warning:You are caught in (a fiery explosion|an explosion of ice and frost)
 msc += $warning:stops burning
 msc += $warning:(The |.*)is healed
-msc += $warning:You stop butchering
 msc += $warning:You feel less studious
 msc += $warning:(corpses?|macabre mass) merges with
 msc += $warning:You start to feel a little uncertain
@@ -1728,7 +1705,6 @@ msc += $warning:You feel transcendent for a moment
 msc += $warning:You're too terrified to move while being watched
 msc += $warning:The weapon returns to the
 msc += $warning:The queen bee calls on the killer bee to defend her
-msc += $warning:You turn into a bat
 msc += $warning:Your.*looks incredibly listless
 msc += $warning:The mass is resisting your pull
 msc += $warning:Moving in this stuff is going to be slow
@@ -1765,7 +1741,6 @@ msc += $warning:Your.*shudders
 # Demonspawn gaining a mutation they already have
 msc += $warning:Your mutations feel more permanent
 msc += $warning:Roots rise up from beneath.*and drag it to the ground
-msc ^= $warning:You hunger for vegetation
 msc ^= $warning:You feel a sudden chill
 msc += $warning:You feel hot for a moment
 msc += $warning:stop glowing
@@ -2066,7 +2041,6 @@ msc += $boring:You smell (smoke|something weird)
 msc += $boring:The floor shifts beneath you alarmingly
 msc += $boring:The reaper smiles without lips
 msc += $boring:great wave of water passes through
-msc += $boring:There isn't anything to butcher here
 msc += $boring:crushes a nearby insect and laughs
 msc += $boring:Welcome back to the Dungeon
 msc += $boring:You are blasted with air
@@ -2230,7 +2204,6 @@ msc += $boring:crimson imp breathes smoke at you
 msc += $boring:Distant voices call out to you
 msc += $boring:You are showered with tiny particles of grit
 msc += $boring:The scroll reassembles itself in your
-msc += $boring:You feel uncomfortably hot
 msc += $boring:Nergalle blows her nose
 msc += $boring:You release your grip on
 msc += $boring:Nergalle looks more energetic
@@ -2244,7 +2217,6 @@ msc += $boring:ghost takes a fighting stance
 msc += $boring:You shiver with fear
 msc += $boring:Your.*falls like a stone
 msc += $boring:You feel a surge of energy from the ground
-msc += $boring:You release your grip on
 msc += $boring:Your head hurts
 msc += $boring:The lightning grounds out
 msc += $boring:Your.*feel warm
@@ -2309,7 +2281,6 @@ msc += $good:Space (bends|warps horribly) around
 msc += $good:(convulses|writhes in agony)
 msc += $good:is splashed with acid
 msc += $good:You feel life coursing into your body
-msc += $good:is struck by lightning
 msc += $good:is burned by acid
 msc += $good:seems to burn from within
 msc += $good:Space warps around
@@ -2373,7 +2344,6 @@ msc += $positive:Your.*wounds heal themselves
 msc += $positive:is recalled
 msc += $positive:You renew your shroud
 msc += $positive:One of your tentacles grows a vicious spike
-msc += $positive:A mana viper appears with a sibilant hiss
 msc += $positive:melts!
 msc += $positive:You extend your mandibles
 msc ^= $positive:Your?.*appears? unharmed
@@ -2391,7 +2361,6 @@ msc += $positive:The rubble rises up and takes form
 msc += $positive:You begin to abjure the creatures around you
 msc += $positive:You extend your aura of abjuration
 msc += $positive:A divine shield forms around you
-msc += $positive:Your attacks no longer feel as feeble
 msc += $positive:Your shroud bends.*attack away
 msc += $positive:illusion disappears in a puff of smoke
 msc += $positive:A beastly little devil appears in a puff
@@ -2465,7 +2434,6 @@ msc += $positive:You feel odd for a moment
 msc += $positive:suddenly stops moving
 msc += $positive:is poisoned
 msc += $positive:looks even sicker
-msc += $positive:A film of ice covers your body
 msc += $positive:is stunned!
 msc += $positive:is flash-frozen
 msc += $positive:seems to slow down
@@ -2528,7 +2496,6 @@ msc += $positive:looks frightened
 msc += $positive:The.*is outlined in light
 msc += $positive:You feel quick
 msc += $positive:You no longer feel sluggish
-msc += $positive:You feel odd for a moment
 msc += $positive:returns to your pack
 msc += $positive:Space distorts slightly along a thin shroud covering your body
 msc += $positive:You are covered in a thin layer of ice
@@ -2912,7 +2879,6 @@ msc += $awesome:rune into the lock
 msc += $awesome:With a loud hiss the gate opens wide
 msc += $awesome:You sensed
 msc += $awesome:You are wearing\:
-msc += $awesome:With a loud hiss the gate opens wide
 msc += $awesome:The shadows inhabiting this place fade forever
 msc += $awesome:You have identified the last
 msc += $awesome:You feel a craving for the dungeon's cuisine
@@ -2960,7 +2926,6 @@ msc += $negative:The pyre of ghostly fire engulfs you
 msc += $negative:Your body is flooded with distortional energies
 msc += $negative:You are caught in a strong localised spatial distortion
 msc ^= $negative:The Shining One blasts you with cleansing flame
-msc += $negative:You are struck by lightning
 msc += $negative:You are caught in an extremely strong localised spatial distortion
 msc += $negative:You are blasted with searing flames
 msc += $negative:Your.*suffers a backlash
@@ -3304,7 +3269,6 @@ msc += $interface:You are already wielding that
 msc += $interface:There isn't anything suitable to butcher here
 msc ^= $interface:Something interferes with your magic
 msc += $interface:You can only heal others!
-msc += $interface:You are already wielding that
 msc += $interface:You don't know.*spells?
 msc += $interface:That is presently inert
 msc += $interface:That isn't a deck
@@ -3403,20 +3367,7 @@ msc += $interface:Saving macro
 msc += $interface:you cannot use those schools of magic
 
 # Muted - unnecessary
-msc += mute:The (bush|fungus|plant) is engulfed
-msc += mute:The (bush|fungus|plant) is struck by lightning
-msc += mute:Cast which spell
-msc += mute:Use which ability
-msc += mute:Evoke which item
-msc += mute:Confirm with
 msc += mute:(Casting|Aiming|Zapping)\:
-msc += mute:Throwing.*\:
-msc += mute:You can\'t see any susceptible monsters within range
-msc += mute:Press\: \? \- help, Shift\-Dir \- straight line, f \- you
-msc += mute:for a list of commands and other information
-msc += mute:Firing \(i
-msc += mute:Fire\/throw which item\?
-msc += mute:You swap places
 
 msc ^= mute:is lightly (damaged|wounded)
 msc ^= mute:is moderately (damaged|wounded)
@@ -3424,29 +3375,7 @@ msc ^= mute:is heavily (damaged|wounded)
 msc ^= mute:is severely (damaged|wounded)
 msc ^= mute:is almost (dead|destroyed)
 
-msc += mute:Was it this warm in here before
-msc += mute:The flames dance
-msc += mute:Your shadow attacks
-msc += mute:Marking area around
-msc += mute:Placed new exclusion
-msc += mute:Reduced exclusion size to a single square
-msc += mute:Removed exclusion
-msc += mute:You can access your shopping list by pressing
-msc += mute:for starvation awaits
-msc += mute:As you enter the labyrinth
-msc += mute:previously moving walls settle noisily into place
-msc += mute:You offer a prayer to Elyvilon
-msc += mute:You offer a prayer to Nemelex Xobeh
-msc += mute:You offer a prayer to Okawaru
-msc += mute:You offer a prayer to Makhleb
 msc ^= mute:You offer a prayer to Lugonu
-msc += mute:Lugonu accepts your kill
-msc += mute:Okawaru is noncommittal
-msc += mute:Nemelex Xobeh is (noncommittal|pleased)
-msc += mute:The plant looks sick
-msc += mute:You start butchering
-msc += mute:You continue butchering
-msc += mute:This raw flesh tastes terrible
 
 : if string.find(you.god(), "Jiyva") then
   msc += mute:You hear a.*slurping noise
