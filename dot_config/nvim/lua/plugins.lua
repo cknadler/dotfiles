@@ -72,7 +72,7 @@ require("lazy").setup({
     config = function()
       require("nvim-treesitter").setup({
         ensure_installed = {
-          "lua", "vim", "go", "ruby", "javascript", "typescript",
+          "lua", "vim", "go", "javascript", "typescript",
           "python", "json", "html", "css", "markdown", "bash",
         },
       })
@@ -90,7 +90,7 @@ require("lazy").setup({
     dependencies = { "williamboman/mason.nvim", "neovim/nvim-lspconfig" },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "gopls", "ts_ls", "ruby_lsp", "pyright" },
+        ensure_installed = { "gopls", "ts_ls", "pyright" },
         automatic_enable = true,
       })
     end },
