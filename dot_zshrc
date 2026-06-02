@@ -134,6 +134,12 @@ eval "$(mise activate zsh)"
 eval "$(fzf --zsh)"
 
 ###
+# zoxide
+###
+
+eval "$(zoxide init zsh)"
+
+###
 # syntax highlighting (must be last)
 ###
 
