@@ -1,7 +1,13 @@
 {
   "theme": "dark",
-  "skipAutoPermissionPrompt": true,
   "permissions": {
-    "defaultMode": "auto"
+    "defaultMode": "auto",
+    "deny": [
+      "Bash(rm -rf /*)",
+      "Bash(rm -rf ~*)",
+      "Bash(sudo rm *)",
+      "Bash(git push --force*)",
+      "Bash(git push -f *)"
+    ]
   }
 }
