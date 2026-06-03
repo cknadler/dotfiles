@@ -20,10 +20,15 @@ Examples: `dot_zshrc` → `~/.zshrc`, `dot_claude/` → `~/.claude/`,
 - `dot_claude/` — Claude Code global config (`CLAUDE.md`, `settings.json`,
   later: `commands/`, `agents/`)
 - `dot_config/` — XDG config: `nvim/`, `ghostty/`
+- `dot_vimrc` — the single, plugin-free Vim config. Sourced by terminal `vim`,
+  `gvim`, and MacVim (`mvim`) — gvim/MacVim load `~/.vimrc` first, so there is
+  no `~/.gvimrc` and no duplication. GUI settings apply via a `GUIEnter`
+  autocmd. nvim (`dot_config/nvim/`) is still the primary editor.
 - `dot_vim/spell/` — shared personal spell dictionary (`en.utf-8.add`). Both
-  Neovim (`dot_config/nvim/lua/options.lua` sets `spellfile`) and the MacVim
-  vim-anywhere popup (`dot_gvimrc`) point here, so `zg`-added words are
-  shared. The rest of the old vim config is gone; nvim is primary.
+  Neovim (`dot_config/nvim/lua/options.lua` sets `spellfile`) and `dot_vimrc`
+  point here, so `zg`-added words are shared across all editors.
+- `dot_vim/colors/molokai.vim` — molokai for Vim/MacVim (`dot_vimrc` loads it);
+  nvim has its own molokai via lazy.nvim.
 - `dot_bin/` — personal scripts on PATH
 - `private_Library/` — macOS `~/Library/Application Support` configs
 - `.chezmoiignore` — files in this repo that don't deploy, plus guards
