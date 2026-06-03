@@ -35,6 +35,13 @@ Examples: `dot_zshrc` → `~/.zshrc`, `dot_claude/` → `~/.claude/`,
 - `chezmoi diff` to preview, `chezmoi apply` to deploy.
 - Auto-commit and auto-push are off — commit explicitly.
 
+## Commit messages
+
+- Describe what changed and why, in plain terms. Sentence-case subject.
+- No `Stage N:` prefixes and no references to the plan or its staging.
+- Don't narrate how the work was done (process, review steps, test counts as
+  the point of the commit) — describe the change itself.
+
 ## Companion repo
 
 [`cknadler/setup`](https://github.com/cknadler/setup) — bootstrap a fresh
