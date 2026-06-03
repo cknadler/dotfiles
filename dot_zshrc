@@ -110,6 +110,8 @@ alias bc-dl='bandcamp-dl --base-dir="Dropbox/music/music-mp3"'
 alias chez="chezmoi"
 alias chez-ra="chezmoi re-add"
 alias chez-cd="chezmoi cd"
+# pull the dotfiles repo and apply, overwriting local drift (repo is the truth)
+alias dotsync="chezmoi git pull -- --ff-only && chezmoi apply --force"
 
 # yt-dlp
 alias yt-dl-audio='yt-dlp -x --audio-format mp3 -o "~/Downloads/%(title)s.%(ext)s"'
