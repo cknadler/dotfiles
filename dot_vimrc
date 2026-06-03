@@ -13,7 +13,8 @@ filetype plugin indent on
 " colors
 """"""""""""""""""""""""
 set background=dark
-silent! colorscheme molokai          " vendored in ~/.vim/colors/
+" molokai is vendored in ~/.vim/colors/; silent! so a miss doesn't error
+silent! colorscheme molokai
 
 """"""""""""""""""""""""
 " GUI (gvim / MacVim only — fired after the window exists so sizing sticks)
@@ -25,13 +26,15 @@ autocmd GUIEnter * set guifont=Monaco:h15 lines=50 columns=90
 " general
 """"""""""""""""""""""""
 set encoding=utf-8
-set clipboard=unnamed                 " share the system clipboard
+" share the system clipboard
+set clipboard=unnamed
 set hidden
 set autoread
 set modelines=0
 set backspace=indent,eol,start
 set noerrorbells visualbell t_vb=
-set shortmess+=I                      " no intro screen
+" no intro screen
+set shortmess+=I
 set lazyredraw
 set history=1000
 
@@ -82,38 +85,53 @@ set wildignore+=node_modules
 """"""""""""""""""""""""
 " key bindings
 """"""""""""""""""""""""
+" NOTE: :map / :autocmd don't support trailing " comments — the text would be
+" swallowed into the mapping. Keep comments on their own lines.
 let mapleader=","
 
-nnoremap <leader><space> :noh<cr>        " clear search highlight
-nnoremap <silent> <leader>d "_d          " delete without clobbering the yank reg
+" clear search highlight
+nnoremap <leader><space> :noh<cr>
+" delete without clobbering the yank register
+nnoremap <silent> <leader>d "_d
 vnoremap <silent> <leader>d "_d
-nnoremap <leader>i :set list!<cr>        " toggle invisible chars
-nnoremap <leader>S :source $MYVIMRC<cr>  " reload this file
-nnoremap <leader>E :vsplit $MYVIMRC<cr>  " edit this file
-vnoremap <leader>s !sort -f<cr>gv        " sort selection / paragraph
+" toggle invisible chars
+nnoremap <leader>i :set list!<cr>
+" reload / edit this file
+nnoremap <leader>S :source $MYVIMRC<cr>
+nnoremap <leader>E :vsplit $MYVIMRC<cr>
+" sort selection / paragraph
+vnoremap <leader>s !sort -f<cr>gv
 nnoremap <leader>s vip!sort -f<cr><Esc>
 
-nnoremap / /\v                           " very-magic search
+" very-magic search
+nnoremap / /\v
 vnoremap / /\v
-nnoremap <tab> %                         " jump between matching pairs
+" jump between matching pairs
+nnoremap <tab> %
 vnoremap <tab> %
-nnoremap ; :                             " quick colon
+" quick colon
+nnoremap ; :
 vnoremap ; :
-nnoremap j gj                            " move by display line when wrapped
+" move by display line when wrapped
+nnoremap j gj
 nnoremap k gk
-nnoremap Y y$                            " yank to end of line
+" yank to end of line
+nnoremap Y y$
 
-vmap <C-x> :!pbcopy<cr>                   " cut to macOS clipboard
-vmap <C-c> :w !pbcopy<cr><cr>             " copy to macOS clipboard
+" cut / copy to the macOS clipboard
+vmap <C-x> :!pbcopy<cr>
+vmap <C-c> :w !pbcopy<cr><cr>
 
-map <C-h> <C-w>h                         " navigate splits with ctrl+hjkl
+" navigate splits with ctrl+hjkl
+map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-autocmd FocusLost * silent! wa           " save on lost focus
+" save on lost focus
+autocmd FocusLost * silent! wa
 
-" no arrow keys
+" disable arrow keys; use :wq, not ZZ
 inoremap <Up> <NOP>
 inoremap <Down> <NOP>
 inoremap <Left> <NOP>
@@ -122,7 +140,7 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
-nnoremap ZZ <NOP>                        " use :wq, not ZZ
+nnoremap ZZ <NOP>
 
 """"""""""""""""""""""""
 " filetypes
