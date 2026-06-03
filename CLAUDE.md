@@ -22,7 +22,7 @@ Examples: `dot_zshrc` → `~/.zshrc`, `dot_claude/` → `~/.claude/`,
 - `dot_config/` — XDG config: `nvim/`, `ghostty/`
 - `dot_vim/spell/` — shared personal spell dictionary (`en.utf-8.add`). Both
   Neovim (`dot_config/nvim/lua/options.lua` sets `spellfile`) and the MacVim
-  vim-anywhere popup (`dot_gvimrc.min`) point here, so `zg`-added words are
+  vim-anywhere popup (`dot_gvimrc`) point here, so `zg`-added words are
   shared. The rest of the old vim config is gone; nvim is primary.
 - `dot_bin/` — personal scripts on PATH
 - `private_Library/` — macOS `~/Library/Application Support` configs

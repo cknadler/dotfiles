@@ -55,7 +55,7 @@ opt.hlsearch   = true
 opt.spelllang = "en"
 opt.spell     = false
 -- Share one personal word list with the MacVim / vim-anywhere popup
--- (~/.gvimrc.min points at this same file). `zg`-added words land here and
+-- (~/.gvimrc points at this same file). `zg`-added words land here and
 -- show up in both editors.
 opt.spellfile = vim.fn.expand("~/.vim/spell/en.utf-8.add")
 

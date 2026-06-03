@@ -1,9 +1,8 @@
-" ~/.gvimrc.min — minimal MacVim config for vim-anywhere popups.
-"
-" Loaded via `mvim -u ~/.gvimrc.min` (see ~/.vim-anywhere/bin/run). Kept
-" deliberately small: this is for quick edits of text-field content (comments,
-" messages, short prose), not a full IDE. The real editor config lives in
-" ~/.config/nvim, which MacVim never reads.
+" ~/.gvimrc — MacVim GUI config. MacVim sources this automatically once the
+" GUI has started, which is where guifont/lines/columns/guioptions must be set;
+" vim-anywhere picks it up via a plain `mvim --nofork` launch (no -u). Used only
+" for quick popup edits of text-field content (comments, messages, short prose)
+" — the real editor config lives in ~/.config/nvim, which MacVim never reads.
 
 set nocompatible
 syntax enable
