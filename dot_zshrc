@@ -33,6 +33,10 @@ if installed brew; then
 fi
 # bin
 PATH=$PATH:$HOME/.bin
+# local
+PATH=$HOME/.local/bin:$PATH
+# toolbox
+PATH=$HOME/.toolbox/bin:$PATH
 
 ###
 # exports
@@ -146,5 +150,3 @@ eval "$(zoxide init zsh)"
 ###
 
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-export PATH="$HOME/.local/bin:$PATH"
