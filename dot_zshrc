@@ -35,8 +35,6 @@ fi
 PATH=$PATH:$HOME/.bin
 # local
 PATH=$HOME/.local/bin:$PATH
-# toolbox
-PATH=$HOME/.toolbox/bin:$PATH
 
 ###
 # exports
@@ -150,3 +148,9 @@ eval "$(zoxide init zsh)"
 ###
 
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+###
+# amazon (internal-only; sourced if present — see KndlrcDotfiles)
+###
+
+[ -f ~/.amazon-env.sh ] && source ~/.amazon-env.sh
